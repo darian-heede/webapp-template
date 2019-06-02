@@ -26,5 +26,13 @@ This is a potential downfall and might support copying app files into image rath
 
 ## Building the docker container
 
+Omit option `--detach` for debugging:
+
 `docker-compose up --build --detach`
 
+## Stop and remove docker-compose images
+
+```bash
+sudo docker-compose stop app nginx mongodb
+sudo docker-compose rm app nginx mongodb
+```

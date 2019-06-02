@@ -2,7 +2,9 @@
 **.key
 **.crt
 
-**.env
+#**.env
 **node_modules
 
-**data**
+**data/**
+
+**.log
