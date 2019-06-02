@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 const MongoClient = require('mongodb').MongoClient;
-//mongo --port 27017 -u "app_user" -p "password" --authenticationDatabase "app"
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
