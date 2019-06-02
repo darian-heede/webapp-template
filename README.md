@@ -44,7 +44,7 @@ Keep the mongodb data within the container by commenting out a line within the `
 
 ```yml
 volumes:
-	- ./mongodb/database/data:/data/db
+  - ./mongodb/database/data:/data/db
 ```
 
 This prevents testing data from being written to disk, including configurations such as user permissions that may change and lead to unexpected behaviour while developing.
