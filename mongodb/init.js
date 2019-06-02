@@ -1,12 +1,12 @@
-var db = connect("mongodb://localhost/admin");
-db.grantRolesToUser(
-	'app_user'
-	,[
-		{
-			role: "root"
-			,db: "admin"
-		}
-	]
+db.createUser(
+	{
+		user: "app_user",
+		pwd: "password",
+		roles: [
+			{
+				role: "dbOwner",
+				db: "app"
+			}
+		]
+	}
 );
-use event;
-db.createCollection("log");
