@@ -58,6 +58,19 @@ The template is set up as to reach the app at `localhost:5001`.
 ## nginx configuration
 
 nginx configurations can be done using the `nginx/nginx.conf`-file. SSL certificates are expected per default and can be added into `nginx/ssl`.
+Generate self signed RSA certificates for testing purposes using [openSSL][6]:
+
+```bash
+sudo mkdir nginx/ssl
+cd nginx/ssl
+
+# Generate key pair
+sudo openssl req -new -x509 -nodes -newkey rsa:4096 -keyout server.key -out server.crt
+
+# Set correct key permissions
+sudo chmod 400 server.key
+sudo chmod 444 server.crt
+```
 
 ## Building the docker container
 
@@ -76,3 +89,4 @@ sudo docker-compose rm app nginx mongodb
 [3]: https://nodejs.org/api/
 [4]: https://expressjs.com/en/4x/api.html
 [5]: https://www.mongodb.com/products/compass
+[6]: https://www.openssl.org/docs/manmaster/man1/openssl-req.html

@@ -39,4 +39,4 @@ services:
     depends_on:
       - mongodb
     env_file:
-     - ./app/.env
+      - ./app/.env
