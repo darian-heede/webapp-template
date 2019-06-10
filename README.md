@@ -53,7 +53,7 @@ When run locally the mongodb can be accessed by using [compass][5] and the user 
 
 Omit `--detach` option when building the containers.
 
-The template is set up as to reach the app at `localhost:5001`.
+The template is set up as to reach the app at `localhost`.
 
 ## nginx configuration
 
