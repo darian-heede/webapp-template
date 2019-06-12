@@ -76,7 +76,7 @@ sudo chmod 444 server.crt
 
 `docker-compose up --build --detach`
 
-## Stop and remove docker-compose images
+## Stop and remove docker-compose containers
 
 ```bash
 sudo docker-compose stop app nginx mongodb
